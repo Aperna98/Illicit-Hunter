@@ -27,7 +27,7 @@ This repository contains tools for analyzing Ethereum transactions, identifying 
 
 **SETUP**
 Python Backend
-1. Clone the repository: git clone https://github.com/Aperna98/Illicit-Hunter.git
+1. Clone the repository: git clone https://github.com/your-username/Illicit-Hunter.git
                          cd Illicit-Hunter
 2. Replace the placeholders in the Python script (main.py) with your credentials:
       Infura Project ID: Replace YOUR_INFURA_PROJECT_ID with your Infura project ID.
