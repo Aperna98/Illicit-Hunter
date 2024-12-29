@@ -1,27 +1,27 @@
 # ILLICIT-HUNTER
 Unmasking Illicit Transfers in Blockchain Ecosystems
 
-Ethereum Suspicious Transaction Monitor
+**Ethereum Suspicious Transaction Monitor**
 This repository contains tools for analyzing Ethereum transactions, identifying suspicious activity, and visualizing transaction data using an interactive chart.
 
 **FEATURES**
-Blockchain Connectivity: Connects to the Ethereum blockchain via Infura or Ganache.
-Suspicious Transaction Detection: 
+1. Blockchain Connectivity: Connects to the Ethereum blockchain via Infura or Ganache.
+2. Suspicious Transaction Detection: 
     Identifies transactions with a value greater than a specified threshold (default: 0.1 ETH). 
     Flags addresses involved in multiple transactions within a specified time window.
-ENS Resolution: Resolves Ethereum addresses to human-readable ENS names, where available.
-Transaction History: Fetches complete transaction histories for flagged addresses from Etherscan.
-Interactive Chart: Visualizes transaction data as a bar chart showing transaction counts and total amounts for address pairs.
-CSV Output:
+3. ENS Resolution: Resolves Ethereum addresses to human-readable ENS names, where available.
+4. Transaction History: Fetches complete transaction histories for flagged addresses from Etherscan.
+5. Interactive Chart: Visualizes transaction data as a bar chart showing transaction counts and total amounts for address pairs.
+6. CSV Output:
     transactions.csv: All transactions fetched within the time window.
     suspicious_addresses.csv: Suspicious addresses identified during the analysis.
     suspicious_addresses_with_usernames.csv: Suspicious addresses with resolved ENS usernames.
     suspicious_transaction_histories.csv: Complete transaction history for suspicious addresses.
 
 **REQUIREMENTS**
-Python (for backend analysis): Python 3.7+ (Dependencies: web3, pandas, requests, ethereum-ens)
+1. Python (for backend analysis): Python 3.7+ (Dependencies: web3, pandas, requests, ethereum-ens)
     --> Install the Python dependencies using: pip install web3 pandas requests ethereum-ens
-HTML/JavaScript (for frontend visualization): 
+2. HTML/JavaScript (for frontend visualization): 
     A modern web browser.
     Internet connection for external libraries (e.g., Chart.js, ethers.js).
 
@@ -42,38 +42,38 @@ HTML Frontend
             Total Amount (ETH): Total ETH transferred between each address pair.
 
 **OUTPUT FILES**
-Backend Outputs
+1. Backend Outputs
     transactions.csv: All transactions fetched during the execution.
     suspicious_addresses.csv: Identified suspicious addresses in a single-column format.
     suspicious_addresses_with_usernames.csv: Suspicious addresses with resolved ENS usernames.
     suspicious_transaction_histories.csv: Complete transaction history for flagged addresses fetched via the Etherscan API.
 
-Frontend Output
+2. Frontend Output
     An interactive bar chart visualized directly in your browser.
     
 **HOW IT WORKS**
 Python Backend Workflow
-  Connect to Ethereum: Uses Infura to connect to the Ethereum mainnet or Ganache for local testing.
-  Fetch Transactions: Retrieves the latest transactions in a specified time window (2 seconds).
-  Identify Suspicious Activity: 
+  1. Connect to Ethereum: Uses Infura to connect to the Ethereum mainnet or Ganache for local testing.
+  2. Fetch Transactions: Retrieves the latest transactions in a specified time window (2 seconds).
+  3. Identify Suspicious Activity: 
         Flags transactions based on: 
             Value greater than 0.1 ETH (modifiable). 
             Addresses that send or receive ETH multiple times.
-  Resolve ENS Names: Resolves human-readable ENS names for suspicious addresses.
-  Fetch Transaction Histories: Uses the Etherscan API to fetch the full transaction history of suspicious addresses.
+  4. Resolve ENS Names: Resolves human-readable ENS names for suspicious addresses.
+  5. Fetch Transaction Histories: Uses the Etherscan API to fetch the full transaction history of suspicious addresses.
 
 HTML Frontend Workflow
-  Fetch Data: Connects to a local Ethereum provider (e.g., Ganache) using ethers.js.
-  Aggregate Transactions: 
+  1. Fetch Data: Connects to a local Ethereum provider (e.g., Ganache) using ethers.js.
+  2. Aggregate Transactions: 
       Groups transactions by address pairs (from → to) and calculates: 
           Total transaction count. 
           Total amount of ETH transferred.
-  Visualize Data: Displays transaction data using a bar chart powered by Chart.js.
+  3. Visualize Data: Displays transaction data using a bar chart powered by Chart.js.
   
 **NOTES**
-  Ensure your Infura project ID and Etherscan API key are valid and active.
-  Use Ganache for local testing of the HTML file by running a local blockchain.
-  The HTML file relies on external JavaScript libraries:
+  1. Ensure your Infura project ID and Etherscan API key are valid and active.
+  2. Use Ganache for local testing of the HTML file by running a local blockchain.
+  3. The HTML file relies on external JavaScript libraries:
       ethers.js: For Ethereum interaction.
       Chart.js: For chart visualization.
 
