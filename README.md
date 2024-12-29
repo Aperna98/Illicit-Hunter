@@ -27,8 +27,8 @@ This repository contains tools for analyzing Ethereum transactions, identifying 
 
 **SETUP**
 Python Backend
-1. Clone the repository: git clone https://github.com/your_username/ethereum-suspicious-monitor.git
-                         cd ethereum-suspicious-monitor
+1. Clone the repository: git clone https://github.com/Aperna98/Illicit-Hunter.git
+                         cd Illicit-Hunter
 2. Replace the placeholders in the Python script (main.py) with your credentials:
       Infura Project ID: Replace YOUR_INFURA_PROJECT_ID with your Infura project ID.
       Etherscan API Key: Replace YOUR_ETHERSCAN_API_KEY with your Etherscan API key
